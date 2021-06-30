@@ -1,0 +1,589 @@
+@font-face {
+  font-family: 'Poppins';
+  src: url('../FONTS/Poppins-Regular.ttf');
+  /* IE9 Compat Modes */
+  src: url('webfont.eot?#iefix') format('embedded-opentype'),
+    /* IE6-IE8 */
+    url('../FONTS/Poppins-Regular.ttf') format('ttf'),
+    /* Super Modern Browsers */
+    /* url('webfont.woff') format('woff'), Pretty Modern Browsers
+         url('webfont.ttf')  format('truetype'), Safari, Android, iOS */
+}
+
+
+body {
+  font-family: 'Poppins', sans-serif;
+  overflow-y: scroll;
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+body {
+  -ms-overflow-style: none;
+  /* IE and Edge */
+  scrollbar-width: none;
+  /* Firefox */
+}
+
+.menu-checkbox {
+  width: 0;
+  height: 0;
+  opacity: 0;
+}
+
+.hamburger-menu {
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+}
+
+.hamburger-menu__logo {
+  margin: .5rem 1rem;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+}
+
+.hamburger-menu__ctrl {
+  margin: 0 0 0 auto;
+}
+
+.hamburger-menu__ctrl--button {
+  background-image: url('../img/home/Menu/Ellipse\ 653.png');
+  background-size: contain;
+  width: 100%;
+  padding: 15px;
+  cursor: pointer;
+  z-index: 20;
+  position: relative;
+
+}
+
+.hamburger-menu__ctrl--button span {
+  display: block;
+  height: 4px;
+  width: 27px;
+  background-color: #50a4fc;
+  margin: 6px 0px 5px 0px;
+  transition: all 700ms ease-in-out;
+  transform: none;
+  z-index: 10;
+}
+
+.no-scrollbar ::-webkit-scrollbar {
+  display: none;
+}
+
+.menu_content {
+  position: fixed;
+  overflow: hidden;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -10;
+  background: #a8e2fb;
+  opacity: 0;
+  display: block;
+  margin-top: 0;
+  transition: all 50ms ease-in-out;
+
+}
+
+.menu_content__items {
+  display: inline-block;
+}
+
+.menu_content__items ul {
+  transform: translateY(15vh);
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  margin-left: 83px;
+}
+
+.menu_content__items ul li a {
+  font-size: 1.5rem;
+  font-weight: 520;
+  color: #0e74d0;
+  text-decoration: none;
+  line-height: 4rem;
+  transition: all 200ms linear;
+}
+
+.menu_content__items ul.sub-list li a {
+
+  display: inline-block;
+  font-size: 25px;
+  font-weight: normal;
+  color: #872087;
+  text-decoration: none;
+  line-height: 2rem;
+}
+
+.menu_content__items ul li a:active,
+.menu_content__items ul li a:hover {
+  color: #0e74d0;
+}
+
+#menustate:checked~.hamburger-menu span:nth-of-type(1) {
+  transform: translate(0, 10px) rotate(-45deg);
+  background-color: #872087;
+  position: relative;
+}
+
+#menustate:checked~.hamburger-menu span:nth-of-type(2) {
+  transform: rotate(45deg) translateX(0px);
+  background-color: #872087;
+  position: relative;
+}
+
+#menustate:checked~.hamburger-menu span:nth-of-type(3) {
+  transition: opacity 350ms linear;
+  opacity: 0;
+}
+
+#menustate:checked~.hamburger-menu .hamburger-menu__items {
+  position: relative;
+  padding-bottom: 1rem;
+}
+
+#menustate:checked~.menu_content {
+  z-index: 1;
+  opacity: 1;
+}
+
+
+@media (max-width: 575.98px) {
+  .menu_content {
+    position: fixed;
+    overflow: hidden;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -10;
+    background: #a8e2fb;
+    opacity: 0;
+    display: block;
+    margin-top: 0;
+    transition: all 50ms ease-in-out;
+  }
+
+  .navbar-brand {
+    width: 50%;
+  }
+
+  .navbar-brand img {
+    width: 100%;
+    padding-left: 29px;
+    margin-top: 21px;
+  }
+
+  .hamburger-menu__ctrl--button {
+    padding-left: 39px;
+    padding-top: 38px;
+    padding-bottom: 35px;
+    padding-right: 34px;
+    margin-top: -16px;
+    background-repeat: no-repeat;
+  }
+
+  .sheik-desktop {
+    display: none;
+  }
+}
+
+p {
+  color: #747474;
+  font-size: 12pt;
+}
+
+h2 {
+  color: #872087;
+  font-weight: bold;
+  font-size: 1.2rem !important;
+}
+
+#myBtn {
+  text-decoration: none;
+  color: #F1C154;
+}
+
+#myBtn:hover {
+  cursor: pointer;
+
+}
+
+#more {
+  display: none;
+}
+
+@media (min-width:992px) {
+  p {
+    font-size: 10pt !important;
+  }
+
+  .sheik-mobile {
+    display: none;
+  }
+
+  .menu-btn {
+    margin-left: 64px;
+    margin-top: -8%;
+    text-decoration: none;
+    padding-top: 3px;
+    padding-bottom: 5px;
+    background-color: #872087;
+    display: block;
+    position: absolute;
+    color: #fff;
+    padding-left: 34px;
+    border-radius: 0px 0px 0px 89px;
+    font-size: 1rem;
+    padding-right: 51px;
+  }
+
+  .menu-btn img {
+    width: 15%;
+    margin-left: 10px;
+  }
+
+  .menu-pattern {
+    width: 274%;
+    height: 117%;
+    margin-left: -169%;
+    margin-top: -33%;
+  }
+
+  .menu_content__items .first-section {
+    margin-top: -77px;
+  }
+
+  .menu_content__items .social {
+    margin-top: 50px;
+    margin-left: 50px;
+    color: #0e74d0;
+  }
+
+  .menu_content__items .social-icons {
+    margin-right: 5px;
+
+  }
+
+  .menu_content__items ul li a:hover {
+    color: #fff;
+  }
+
+  .hamburger-menu__ctrl--button {
+    padding-left: 39px;
+    padding-top: 38px;
+    padding-bottom: 35px;
+    padding-right: 34px;
+    margin-top: -16px;
+    background-repeat: no-repeat;
+  }
+
+  .main-logo img {
+    width: 47%;
+    margin-left: 88px;
+    margin-top: 37px;
+  }
+
+  .sub-text {
+    font-weight: normal !important;
+    color: #872087 !important;
+    font-size: 1.2rem !important;
+    display: block;
+    line-height: 1.5rem !important;
+    margin-left: 15px;
+    border-left: 2px solid white;
+    padding-left: 11px;
+    padding-bottom: 7px;
+  }
+
+  .sub-text:hover {
+    color: #0e74d0 !important;
+  }
+
+  .menu_content__items .first-section {
+    margin-top: -77px;
+  }
+
+  .whatwedo .main-title {
+    margin-left: 10%;
+    margin-top: 45%;
+  }
+
+  .whatwedo .main-pattern {
+    width: 94%;
+    margin-left: 9px;
+    margin-top: -157px;
+    transform: rotate(38deg);
+  }
+
+  .main-title {
+    font-weight: 520;
+    font-size: 3.4rem;
+  }
+
+  .whatwedo .second {
+    overflow: hidden;
+  }
+
+  .whatwedo .early-access {
+    background-color: #fbfbfd;
+  }
+
+  .early-access .ea-icon {
+    margin-left: 162px;
+    width: 49%;
+    padding-top: 94px;
+  }
+
+  .early-access h2 {
+    font-size: 1.4rem;
+    padding-top: 83px;
+  }
+
+  .early-access .second {
+    margin-bottom: 68px;
+  }
+
+  .medical {
+    margin-top: 80px;
+    margin-bottom: 80px;
+  }
+
+  .medical .medical-img {
+    max-width: 94%;
+  }
+
+  .medical h2 {
+    margin: 25px 0px 25px 0px
+  }
+
+  .medical-icon {
+    width: 42%;
+    margin-top: 12px;
+  }
+
+  .medical-text {
+    margin-right: 63px;
+  }
+
+  .regulatory .container {
+    background-color: #fbfbfd;
+  }
+
+  .regulatory .second {
+    padding-top: 80px;
+  }
+
+  .regulatory .row {
+    padding-bottom: 91px;
+  }
+
+  .reg-img {
+    margin-top: 106px;
+    max-width: 69%;
+    margin-left: 89px;
+  }
+
+  .commerce {
+    margin-top: 80px;
+    margin-bottom: 90px;
+  }
+
+  .commerce h2 {
+    margin: 34px 0px 20px 0px;
+  }
+
+  .commerce .com-icon {
+    width: 36%;
+  }
+
+  .commerce .com-img {
+    max-width: 100%;
+  }
+
+  .commerce .first {
+    padding-right: 60px;
+  }
+
+  .logistics {
+    margin-top: 80px;
+    margin-bottom: 80px;
+  }
+
+  .logistics .container {
+    background-color: #fbfbfd;
+  }
+
+  .logistics .log-img {
+    margin-top: 106px;
+    max-width: 69%;
+    margin-left: 81px;
+  }
+
+  .logistics .second {
+    padding-top: 80px;
+  }
+
+  .logistics .row {
+    padding-bottom: 91px;
+  }
+
+  .pharma {
+    margin-top: 80px;
+    margin-bottom: 80px;
+  }
+
+  .pharma .pharma-img {
+    max-width: 94%;
+  }
+
+  .pharma .pharma-icon {
+    width: 42%;
+    margin-top: 12px;
+  }
+
+  .pharma h2 {
+    margin: 25px 0px 25px 0px;
+  }
+
+  .quality {
+    margin-top: 80px;
+    margin-bottom: 80px;
+  }
+
+  .quality .container {
+    background-color: #fbfbfd;
+  }
+
+  .quality .row {
+    padding-bottom: 91px;
+  }
+
+  .quality .second {
+    padding-top: 80px;
+  }
+
+  .quality .qual-icon {
+    margin-top: 106px;
+    max-width: 69%;
+    margin-left: 81px;
+  }
+
+  /* .pharma-text {
+      margin-right: 23px
+    } */
+  .footer .social-icons {
+    width: 2%;
+    margin-left: 5px;
+    margin-right: 5px;
+  }
+
+  .footer .bg-image div {
+    margin-bottom: 30px;
+  }
+
+  .footer .bg-image {
+    background-image: url('../img/whatwefoot.png');
+  }
+
+  .footer .col-lg-6 {
+    margin-bottom: 73px;
+  }
+
+  /* .footer {
+      margin-top: 56px;
+    } */
+  .footer .bg-image {
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+  .footer .bg-second {
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+  .healthcarefooter {
+    width: 20%;
+    margin-left: 71px;
+  }
+
+  .footer {
+    padding-top: 50px;
+  }
+
+  .footer-btn {
+    font-weight: 520;
+    text-decoration: none;
+    padding-top: 6px;
+    padding-bottom: 6px;
+    padding-left: 80px;
+    padding-right: 85px;
+    margin-left: 80px;
+    background-color: #a8e2fb;
+    color: #872087;
+    border-radius: 0px 34px 0px 34px;
+  }
+
+  .footer .outbtn {
+    background-color: transparent;
+    border: none;
+    margin-top: -89px;
+  }
+
+  .footer-line {
+    height: 70%;
+    margin-top: -95px;
+  }
+
+  .footer .footer-links {
+    display: inline-block;
+    margin-top: 50px;
+  }
+
+  .footer .footer-links li {
+    list-style: none;
+    font-weight: bold;
+    color: #0e74d0;
+  }
+
+  .bg-second .col-lg-4 {
+    padding-left: 135px;
+    margin-top: 40px;
+    margin-bottom: 22px;
+  }
+
+  .accessrare {
+    width: 25%;
+    margin-top: 105px;
+    margin-left: 100px;
+  }
+
+  .footer .social {
+    color: #FFF;
+    font-size: 12pt !important;
+    font-weight: 520;
+  }
+
+  .footer p {
+    margin-top: 47px;
+    margin-bottom: 40px;
+    margin-left: 104px;
+  }
+}
+
+@media (min-width:1200px) {
+  p {
+    font-size: 15pt !important;
+  }
+
+  #myBtn {
+    font-size: 15pt !important;
+  }
+}

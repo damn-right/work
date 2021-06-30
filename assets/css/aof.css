@@ -1,0 +1,209 @@
+html,
+body {
+  width: 100vw;
+  overflow-x: hidden;
+}
+
+.pleft {
+  padding-left: 4rem;
+}
+
+.hero-bg {
+  width: 100%;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1;
+}
+
+.main .heading {
+  color: #872087;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 4rem;
+  text-align: center;
+  margin-top: -28%;
+  z-index: 2;
+  position: relative;
+}
+
+.main .subheading {
+  font-weight: 700;
+  font-size: 3rem;
+  color: #99e1fc;
+  text-align: center;
+}
+
+.main .sub-subheading {
+  color: #f995c7;
+  position: relative;
+}
+
+.therapy,
+.rare,
+.areas {
+  margin: 20rem 6rem 0;
+}
+
+.therapy {
+  margin-top: 15rem;
+}
+
+.therapy img {
+  width: 8vw;
+  display: block;
+  margin: auto;
+  margin-bottom: 1rem;
+}
+
+.therapy .info {
+  margin-top: 2rem;
+}
+
+.therapy .info .row {
+  margin-bottom: 2rem;
+}
+
+.therapy .info .col-2 span {
+  background-color: #aae2fb;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 700;
+  color: #872087;
+  min-height: 70px
+}
+
+.rare .col-4 {
+  padding-top: 7.5rem;
+  padding-left: 4rem;
+}
+
+.rare .col-8 img {
+  position: relative;
+  right: -6rem;
+}
+
+.therapy {
+  position: relative;
+}
+
+.therapy::after {
+  content: '';
+  z-index: -1;
+  position: absolute;
+  inset: -50% 0% -20%;
+  background-color: #fbfbfd;
+}
+
+.rare .row {
+  position: relative;
+}
+
+.rare .row::after {
+  content: '';
+  z-index: -1;
+  position: absolute;
+  inset: 5% .9% 0%;
+  background-color: #fbfbfd;
+}
+
+.areas>section {
+  position: relative;
+  margin-bottom: 15rem;
+}
+
+.areas .row {
+  background-color: #fbfbfd;
+}
+
+.areas .col:first-of-type {
+  padding: 4rem;
+}
+
+.areas .subheading:nth-child(2) {
+  padding-left: 4rem;
+}
+
+.areas .box {
+  margin-bottom: 2rem;
+}
+
+.areas .box .label {
+  font-weight: 700;
+  font-size: 1.25rem;
+  color: #99e1fc;
+  position: relative;
+  cursor: pointer;
+}
+
+.areas .box .label.active {
+  color: #872087;
+}
+
+.areas .box .label.active::after {
+  content: '-';
+}
+
+.areas .box .label.active+.content {
+  max-height: 500px;
+  transition: max-height 1s ease;
+}
+
+.areas .box .label::after {
+  content: '+';
+  position: absolute;
+  right: 15px;
+  font-size: 2.5rem;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.areas .box .content {
+  max-height: 0;
+  overflow-y: hidden;
+  transition: max-height .3s ease;
+}
+
+.areas .box .content p {
+  color: black;
+  padding-right: 8rem;
+  font-size: 1rem !important;
+  font-weight: 300;
+}
+
+.circ-1 {
+  position: absolute;
+  z-index: 1;
+  top: 38%;
+  right: -7rem;
+  pointer-events: none;
+  width: 580px;
+}
+
+.circ-2 {
+  position: absolute;
+  pointer-events: none;
+  z-index: 1;
+  bottom: -13rem;
+  left: -4rem;
+  width: 300px;
+}
+
+.circ-3 {
+  position: absolute;
+  pointer-events: none;
+  z-index: 1;
+  width: 200px;
+  left: 11rem;
+  bottom: -11.5rem;
+}
+
+.circ-4 {
+  position: absolute;
+  pointer-events: none;
+  z-index: 1;
+  width: 600px;
+  bottom: -8.2rem;
+  right: -5rem;
+}

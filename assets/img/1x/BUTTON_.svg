@@ -1,0 +1,19 @@
+<svg id="BUTTON_" data-name="BUTTON " xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="286" height="60" viewBox="0 0 286 60">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #a8e2fb;
+      }
+
+      .cls-2 {
+        font-size: 24px;
+        fill: #872087;
+        font-family: Poppins;
+        font-weight: 500;
+      }
+    </style>
+  </defs>
+  <rect id="Rectangle_19_copy" data-name="Rectangle 19 copy" class="cls-1" width="286" height="60" rx="30" ry="30"/>
+  <image id="ARROW_" data-name="ARROW " x="191" y="24" width="66" height="14" xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEIAAAAOCAYAAACbzsr/AAABC0lEQVRIieXXsS4EURTG8d8yCY1OrbZPQa+nF72a6LyAaL0AjV0i0SgEHVGKUrYStloNhZCbnE0mssLubOGOLzmZac7Jvf8555t7G1vNbZnpDi0c4hYf41j+RG4U0MQmbvCAHSxgskrRHEGUNYd1nOMRe1jC1LCFcgdR1izWcIJn7GMZM79JrhOIstLmV3CAp4CzGrAGqhiX2fxhTce4pHjHZRjtETr9Zde1I75TMtRF7IbRXmMD8/8NxFc1+lHES06qMsppNK7iHNIqj0aRGYRR9IYztCO6g2rUFcQLTsMU07P3U0KdQKQvfRwtnzrgdZjk3EF04jeYNn8RHjCScgRxXzK7dN+ofg7CJ6JWM6AlO1zIAAAAAElFTkSuQmCC"/>
+  <text id="Click_to_Visit" data-name="Click to Visit" class="cls-2" x="32.569" y="20.92">Click to Visit</text>
+</svg>
